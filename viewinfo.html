@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View info</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            background-image: url('https://img.freepik.com/free-vector/minimal-background-with-abstract-shapes_91008-336.jpg?t=st=1717003914~exp=1717007514~hmac=601caec2a6fe74cc412cbaba22d253ae5b36492716690f2b8a1a1cd3487f4dfa&w=996');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: lavender;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out; 
+        }
+        .container:hover {
+            transform: scale(1.05); 
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #addfff;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #2196F3;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0b7dda;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Access your stored personal details.</h2>
+        <form id="viewInfoForm" action="/viewinfo" method="get">
+            <label for="title">Enter the Name of the profile to Display:</label>
+            <input type="text" id="fn" name="firstname" ><br>
+            <button type="submit">View profile</button><br>
+            <h2><center>OR</center></h2><br>
+            <button type="submit">View all profiles</button>
+
+        </form>
+    </div>
+
+</body>
+</html>

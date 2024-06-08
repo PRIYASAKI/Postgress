@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addinfo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            background-image: url('https://img.freepik.com/free-photo/top-view-paper-dove-with-copy-space_23-2148630337.jpg?t=st=1716998974~exp=1717002574~hmac=0eb96a75504f7d95e022eba40357ccd0332eb703607a7289eee6f08ec617748f&w=1380');
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-form {
+            width: 100%;
+            max-width: 500px; 
+            height: 600px; 
+            padding: 30px; 
+            background-color: lavender;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            position: relative;
+            left: -200px; 
+        }
+
+        .login-form:hover {
+            transform: scale(1.05);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        input[type="date"],
+        input[type="tel"],
+        select {
+            width: 100%;
+            padding: 10px; 
+            margin-bottom: 15px; 
+            border: 1px solid #addfff;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px; 
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-form">
+        <h2>Store your personal information securely with us.</h2>
+        <form action="/addinfo" method="post">
+            <div class="input-group">
+                <label for="fn">First Name:</label>
+                <input type="text" id="fn" name="fn" required>
+            </div>
+            <div class="input-group">
+                <label for="ln">Last Name:</label>
+                <input type="text" id="ln" name="ln" required>
+            </div>
+            <div class="input-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="input-group">
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="">Select your gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+            <div class="input-group">
+                <label for="phone">Phone no:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <button type="submit">Add profile</button>
+        </form>
+    </div>
+</body>
+</html>

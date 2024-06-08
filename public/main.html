@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PersonalSphere</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            background-image: url('https://img.freepik.com/free-vector/minimal-background-with-abstract-shapes_91008-336.jpg?t=st=1717003914~exp=1717007514~hmac=601caec2a6fe74cc412cbaba22d253ae5b36492716690f2b8a1a1cd3487f4dfa&w=996');
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .text-container {
+            max-width: 600px;
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .button-container {
+            margin-top: 20px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="text-container">
+        <h1>Welcome to PersonalSphere!</h1>
+        <p>Explore and manage your personal details with ease.</p>
+        <p class="info">You can view, update, and manage your personal information including contact details, address, and more.</p>
+        <form action="/" method="get" id="infoForm">
+            <div class="button-container">
+                <button type="submit" onclick="set('/add')">Add Information</button>
+                <button type="submit" onclick="set('/update')">Update Information</button>
+                <button type="submit" onclick="set('/view')">View Information</button>
+                <button type="submit" onclick="set('/delete')">Delete Information</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        function set(path) {
+            document.getElementById("infoForm").action = path;
+        }
+    </script>
+</body>
+</html>
